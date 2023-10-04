@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Roboto', sans-serif, FontAwesome; cursor: default;
+}
+
+body {
+    height: 100vh; max-height: 100vh; padding: 1em;
+    display: flex; align-items: center; background-color: #393E41;
+
+    .container {
+        width: 525px; min-width: 425px; height: fit-content;
+        border-radius: 10px; padding: 1em; background-color: #F6F7EB; box-shadow: 0px 0px 5px 5px rgba(255,255,255,0.1);
+        text-align: center; color: #F6F7EB;      
+
+        .title { /* Container Title */
+            width: 100%; display: inline-block; margin-bottom: 10px;
+            font-size: 15px; text-transform: uppercase; font-weight: bold; color: #E94F37;
+        }
+        .div-title { /* Container Subtitles */
+            width: 100%; display: inline-block;
+            text-align: center; font-size: 16px; font-weight: bold; 
+            margin-bottom: 5px; border-bottom: 1px dotted #F6F7EB;
+        }
+        /* Password Characteristics */
+        .pass-char, .pass-length { 
+            display: flex; align-items: center; justify-content: center;
+            flex-wrap: wrap; flex-direction: row; text-align: left;
+            padding: 5px; border-radius: 5px 5px 0 0;   
+            background-color: #393E41;
+            .row {
+                width: 50%; height: 100px; border-radius: 5px;
+                padding: 0.5rem;
+                input { cursor: pointer; }
+                .symbols-info { /* Tooltip Button */
+                    padding: 0; color: #E94F37;
+                    text-decoration: none; font-weight: bold;                    
+                }
+                label { font-size: 14px; }
+                .form-check-input { /* Char-Switches */
+                    border-color: #393E41; border-width: 2px;
+                    &:checked {
+                        background-color: #E94F37; border-color: #E94F37;
+                        border-color: #F6F7EB;
+                    }
+                    &:focus { box-shadow: 0 0 0 .15rem #F6F7EB; }
+                }                
+            }  
+        }
+        /* Password Length */
+        .pass-length { 
+            flex-direction: row;
+            padding: 5px; border-radius: 0 0 5px 5px;               
+            p { margin-bottom: 0; } /* Subtitle - Small */
+            small {
+                width: 100%; margin-bottom: 10px;
+                text-align: center; font-size: 9.5px;                
+            }
+            .pass-length-input { /* Input Range */
+                cursor: pointer; margin-bottom: 5px; 
+            }
+            .length-value { font-size: 12px; margin-bottom: 5px; }
+            .form-range::-moz-range-thumb {
+                width: 10px; height: 20px;
+                background-color: #E94F37; border: 1px solid #F6F7EB;                
+            }
+            .form-range::-moz-range-track { height: 1px; }
+            .form-range:focus::-moz-range-thumb { box-shadow: 0 0 0 .15rem #F6F7EB; }
+            .progress { width: 100%; height: 5px; } /* Security progress bar */
+            .sec-level-text {
+                font-size: 11px; letter-spacing: 1px;
+                margin-top: 8px;
+            }
+           
+        }
+        /* Generate - Copy Buttons */
+        #generate-pass, #copy-password {
+            margin: 10px 0;
+            background-color: #E94F37; border-color: #bb2d3b;
+            &:hover { background-color: #bb2d3b; }
+        }
+        .generated-password {
+            display: flex; justify-content: center; flex-wrap: wrap;
+            padding: 0.5rem; border-radius: 5px; gap: 15px;
+            background-color: #393E41; color: #F6F7EB;
+            #generated-pass-input { /* Generated Password Input */
+                width: 85%; 
+                background-color: white; cursor: copy;
+                font-size: 16px; font-weight: bold; letter-spacing: 1px; text-align: center;   
+                &::selection { background-color: #ffc107; }             
+            }
+            #copy-password { margin: 0; }            
+        }
+    }
+}
