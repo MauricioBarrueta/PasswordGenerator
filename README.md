@@ -4,4 +4,4 @@
 🇺🇸 This website allows you to randomly generate fully customized passwords, you can choose which characters may be included and which may not, whether whitespace is allowed or not,
    even if the characters can be repeated or not and the length of the password, where the greater the number of characters, the greater the security and vice versa.
 
-![PasswordGenerator](https://github.com/MauricioBarrueta/PasswordGenerator/assets/60496232/f25ae374-2f83-4012-9997-31508384a45e)
+![passwordGenerator](https://github.com/MauricioBarrueta/PasswordGenerator/assets/60496232/fb9e5e74-e645-42fb-839a-7ad72ebe42fd)
