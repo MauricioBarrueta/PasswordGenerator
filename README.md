@@ -1,7 +1,8 @@
-🇲🇽 Sitio web el cuál permite generar contraseñas de manera aleatoria totalmente personalizadas, se pueden elegir cuáles caracteres puede o no incluir, si puede tener espacios en
-   blanco o no, si los caracteres se pueden repetir o no y la longitud de la contraseña, que a mayor cantidad de caracteres mayor seguridad y viceversa.
+🇲🇽 Este sitio web permite generar contraseñas aleatorias personalizadas, es posible elegir cuáles caracteres puede incluir y cuáles no, si puede tener espacios o caracteres repetidos y la longitud de la contraseña, que a mayor longitud, mayor seguridad y viceversa.
 
-🇺🇸 This website allows you to randomly generate fully customized passwords, you can choose which characters may be included and which may not, whether whitespace is allowed or not,
-   even if the characters can be repeated or not and the length of the password, where the greater the number of characters, the greater the security and vice versa.
+🇺🇸 This website allows you to generate customized random passwords, you can choose which characters to include and which not to include, whether you can have spaces or repeated characters and the length of the password, the longer the password, the more secure it is and vice versa.
+
+🔗 https://mauriciobarrueta.github.io/PasswordGenerator/
+   
 
 ![passwordGenerator](https://github.com/MauricioBarrueta/PasswordGenerator/assets/60496232/f9913490-2b67-4b5a-b6d0-8fb7af347313)
