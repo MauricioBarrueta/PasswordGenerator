@@ -1,8 +1,8 @@
-🇲🇽 Este sitio web permite generar contraseñas aleatorias personalizadas, es posible elegir cuáles caracteres puede incluir y cuáles no, si puede tener espacios o caracteres repetidos y la longitud de la contraseña, que a mayor longitud, mayor seguridad y viceversa.
+🇲🇽 Sitio web desarrollado con JavaScript, la biblioteca jQuery, SCSS y Bootstrap, publicado mediante GitHub Pages.
 
-🇺🇸 This website allows you to generate customized random passwords, you can choose which characters to include and which not to include, whether you can have spaces or repeated characters and the length of the password, the longer the password, the more secure it is and vice versa.
 
-🔗 https://mauriciobarrueta.github.io/PasswordGenerator/
-   
+🇺🇸 Website developed with JavaScript, jQuery library, SCSS and Bootstrap, published via GitHub Pages.
 
-![passwordGenerator](https://github.com/MauricioBarrueta/PasswordGenerator/assets/60496232/f9913490-2b67-4b5a-b6d0-8fb7af347313)
+🔗 https://mauriciobarrueta.github.io/PasswordGenerator/   
+
+![pass-generator](https://github.com/user-attachments/assets/b4d26ee2-91dc-4f19-9f3f-e77e5d01d61d)
