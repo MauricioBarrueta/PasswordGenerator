@@ -46,11 +46,11 @@ const passwordSecurityLvl = () => {
         : (barWth = '100%', barBg = '#198754', secTxt = 'Muy fuerte')    
     passSecurityLevelBar.style.width = barWth
     passSecurityLevelBar.style.background = barBg
-    secLevelText.innerHTML = '&#xf3ed; Nivel de seguridad: ' + secTxt
+    secLevelText.innerHTML = '<i class="fa-solid fa-lock me-2"></i>Nivel de seguridad: ' + '<b>' + secTxt + '</b>'
 }
 
 const getPasslengthValue = () => {
-    passLenghtValue.innerHTML = 'Contraseña de ' + passwordLenght.value + ' caracteres'
+    passLenghtValue.innerHTML = 'Longitud: ' + passwordLenght.value + ' caracteres'
     generateRandomPassword()   
     passwordSecurityLvl()
 }
@@ -64,9 +64,22 @@ copyGeneratedPassBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(generatedPassValue.value)        
 })
 
-/* Deshabilita el botón en caso de que ninguna opción se encuentre activada */
-var switches = $('.form-check-input');
-switches.change(function () {
-    $('#generate-pass').prop('disabled', switches.filter(':checked').length < 1);
-});
-switches.change();
+/* Deshabilita los botones en caso de que ninguna opción se encuentre activada */
+const switches = document.querySelectorAll('.form-check-input')
+const generatePass = document.querySelector('#generate-pass')
+
+const updateButtonState = () => {
+    const hasCheckedSwitch = document.querySelector('.form-check-input:checked')
+
+    generatePass.disabled = !hasCheckedSwitch
+    copyGeneratedPassBtn.disabled = !hasCheckedSwitch
+    if (!hasCheckedSwitch) {
+        generatedPassValue.value = ''
+    }
+};
+
+switches.forEach(switchElement => {
+    switchElement.addEventListener('change', updateButtonState)
+})
+
+updateButtonState()

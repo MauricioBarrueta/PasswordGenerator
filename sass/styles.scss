@@ -9,28 +9,35 @@ body {
     display: flex; align-items: center; background-color: #393E41;
 
     .container {
-        width: 525px; min-width: 425px; height: fit-content;
+        width: 550px; max-width: 100%;
         border-radius: 10px; padding: 1em; background-color: #F6F7EB; box-shadow: 0px 0px 5px 5px rgba(255,255,255,0.1);
         text-align: center; color: #F6F7EB;      
 
         .title { /* Container Title */
             width: 100%; display: inline-block; margin-bottom: 10px;
-            font-size: 15px; text-transform: uppercase; font-weight: bold; color: #E94F37;
+            font-size: 16px; text-transform: uppercase; font-weight: bold; color: #E94F37;
         }
         .div-title { /* Container Subtitles */
             width: 100%; display: inline-block;
-            text-align: center; font-size: 16px; font-weight: bold; 
-            margin-bottom: 5px; border-bottom: 1px dotted #F6F7EB;
+            text-align: center; font-size: 14px; font-weight: bold; 
+            margin-bottom: 0;  padding-bottom: 0.5rem; border-bottom: 1px dashed #F6F7EB;
         }
         /* Password Characteristics */
+        .pass-char { column-gap: 1rem; } 
         .pass-char, .pass-length { 
-            display: flex; align-items: center; justify-content: center;
+            display: flex; align-items: center; justify-content: flex-end;
             flex-wrap: wrap; flex-direction: row; text-align: left;
-            padding: 5px; border-radius: 5px 5px 0 0;   
+            padding: 1rem; border-radius: 5px 5px 0 0;   
             background-color: #393E41;
             .row {
-                width: 50%; height: 100px; border-radius: 5px;
-                padding: 0.5rem;
+                width: 50%; height: 121px; border-radius: 5px;
+                padding: 0.5rem 0; margin-top: 5px;
+
+                .form-check {
+                    padding-right: 0; margin-bottom: 15px;
+                    &:last-child { margin-bottom: 0; }
+                }
+
                 input { cursor: pointer; }
                 .symbols-info { /* Tooltip Button */
                     padding: 0; color: #E94F37;
@@ -47,38 +54,49 @@ body {
                 }                
             }  
         }
+
         /* Password Length */
         .pass-length { 
-            flex-direction: row;
-            padding: 5px; border-radius: 0 0 5px 5px;               
+            flex-direction: row; padding-top: 0;
+            border-radius: 0 0 5px 5px;               
             p { margin-bottom: 0; } /* Subtitle - Small */
             small {
-                width: 100%; margin-bottom: 10px;
-                text-align: center; font-size: 9.5px;                
+                width: 100%;
+                padding: 0.5rem 0;
+                text-align: center; font-size: 10px; letter-spacing: 1px; color: #b5b8bb;     
+            }
+            .length-value { 
+                font-size: 12px; margin: 10px 0 5px 0;
+                text-align: center;
             }
             .pass-length-input { /* Input Range */
                 cursor: pointer; margin-bottom: 5px; 
-            }
-            .length-value { font-size: 12px; margin-bottom: 5px; }
+            }            
             .form-range::-moz-range-thumb {
                 width: 10px; height: 20px;
                 background-color: #E94F37; border: 1px solid #F6F7EB;                
             }
-            .form-range::-moz-range-track { height: 1px; }
+            .form-range::-moz-range-track { height: 2px; }
             .form-range:focus::-moz-range-thumb { box-shadow: 0 0 0 .15rem #F6F7EB; }
-            .progress { width: 100%; height: 5px; } /* Security progress bar */
+            .progress { width: 100%; height: 5px; border: 1px solid #FFf; } /* Security progress bar */
             .sec-level-text {
-                font-size: 11px; letter-spacing: 1px;
-                margin-top: 8px;
+                font-size: 12px; text-align: center;
+                margin-top: 10px;
             }
            
         }
-        /* Generate - Copy Buttons */
+
         #generate-pass, #copy-password {
-            margin: 10px 0;
+            margin: 1rem 0;
             background-color: #E94F37; border-color: #bb2d3b;
             &:hover { background-color: #bb2d3b; }
+            &:disabled { 
+                cursor: not-allowed; pointer-events: all;
+                background-color: #E94F37;
+                &:hover { background-color: #E94F37; }
+            }
         }
+
         .generated-password {
             display: flex; justify-content: center; flex-wrap: wrap;
             padding: 0.5rem; border-radius: 5px; gap: 15px;
