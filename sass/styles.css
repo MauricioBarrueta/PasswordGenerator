@@ -16,25 +16,20 @@ body {
   background-color: #393E41;
 }
 body .container {
-  width: 525px;
-  min-width: 425px;
-  height: -moz-fit-content;
-  height: fit-content;
+  width: 550px;
+  max-width: 100%;
   border-radius: 10px;
   padding: 1em;
   background-color: #F6F7EB;
   box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.1);
   text-align: center;
   color: #F6F7EB;
-  /* Password Characteristics */
-  /* Password Length */
-  /* Generate - Copy Buttons */
 }
 body .container .title { /* Container Title */
   width: 100%;
   display: inline-block;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
   color: #E94F37;
@@ -43,27 +38,43 @@ body .container .div-title { /* Container Subtitles */
   width: 100%;
   display: inline-block;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
-  margin-bottom: 5px;
-  border-bottom: 1px dotted #F6F7EB;
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed #F6F7EB;
+}
+body .container {
+  /* Password Characteristics */
+}
+body .container .pass-char {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }
 body .container .pass-char, body .container .pass-length {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
   flex-direction: row;
   text-align: left;
-  padding: 5px;
+  padding: 1rem;
   border-radius: 5px 5px 0 0;
   background-color: #393E41;
 }
 body .container .pass-char .row, body .container .pass-length .row {
   width: 50%;
-  height: 100px;
+  height: 121px;
   border-radius: 5px;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
+  margin-top: 5px;
+}
+body .container .pass-char .row .form-check, body .container .pass-length .row .form-check {
+  padding-right: 0;
+  margin-bottom: 15px;
+}
+body .container .pass-char .row .form-check:last-child, body .container .pass-length .row .form-check:last-child {
+  margin-bottom: 0;
 }
 body .container .pass-char .row input, body .container .pass-length .row input {
   cursor: pointer;
@@ -89,28 +100,33 @@ body .container .pass-char .row .form-check-input:checked, body .container .pass
 body .container .pass-char .row .form-check-input:focus, body .container .pass-length .row .form-check-input:focus {
   box-shadow: 0 0 0 0.15rem #F6F7EB;
 }
+body .container {
+  /* Password Length */
+}
 body .container .pass-length {
   flex-direction: row;
-  padding: 5px;
+  padding-top: 0;
   border-radius: 0 0 5px 5px;
-  /* Subtitle - Small */
-  /* Security progress bar */
 }
 body .container .pass-length p {
   margin-bottom: 0;
 }
+body .container .pass-length { /* Subtitle - Small */ }
 body .container .pass-length small {
   width: 100%;
-  margin-bottom: 10px;
+  padding: 0.5rem 0;
   text-align: center;
-  font-size: 9.5px;
-}
-body .container .pass-length .pass-length-input { /* Input Range */
-  cursor: pointer;
-  margin-bottom: 5px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #b5b8bb;
 }
 body .container .pass-length .length-value {
   font-size: 12px;
+  margin: 10px 0 5px 0;
+  text-align: center;
+}
+body .container .pass-length .pass-length-input { /* Input Range */
+  cursor: pointer;
   margin-bottom: 5px;
 }
 body .container .pass-length .form-range::-moz-range-thumb {
@@ -120,7 +136,7 @@ body .container .pass-length .form-range::-moz-range-thumb {
   border: 1px solid #F6F7EB;
 }
 body .container .pass-length .form-range::-moz-range-track {
-  height: 1px;
+  height: 2px;
 }
 body .container .pass-length .form-range:focus::-moz-range-thumb {
   box-shadow: 0 0 0 0.15rem #F6F7EB;
@@ -128,19 +144,29 @@ body .container .pass-length .form-range:focus::-moz-range-thumb {
 body .container .pass-length .progress {
   width: 100%;
   height: 5px;
+  border: 1px solid #FFf;
 }
+body .container .pass-length { /* Security progress bar */ }
 body .container .pass-length .sec-level-text {
-  font-size: 11px;
-  letter-spacing: 1px;
-  margin-top: 8px;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
 }
 body .container #generate-pass, body .container #copy-password {
-  margin: 10px 0;
+  margin: 1rem 0;
   background-color: #E94F37;
   border-color: #bb2d3b;
 }
 body .container #generate-pass:hover, body .container #copy-password:hover {
   background-color: #bb2d3b;
+}
+body .container #generate-pass:disabled, body .container #copy-password:disabled {
+  cursor: not-allowed;
+  pointer-events: all;
+  background-color: #E94F37;
+}
+body .container #generate-pass:disabled:hover, body .container #copy-password:disabled:hover {
+  background-color: #E94F37;
 }
 body .container .generated-password {
   display: flex;
