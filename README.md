@@ -1,6 +1,6 @@
-🇲🇽 Sitio web desarrollado con JavaScript, la biblioteca jQuery, SCSS y Bootstrap, publicado mediante GitHub Pages.
+🇲🇽 Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages.
 
-🇺🇸 Website developed with JavaScript, the jQuery library, SCSS, and Bootstrap, deployed on GitHub Pages.
+🇺🇸 Website developed with JavaScript, SCSS, and Bootstrap, deployed on GitHub Pages.
 
 🔗 https://mauriciobarrueta.github.io/PasswordGenerator/   
 
