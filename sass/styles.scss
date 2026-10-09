@@ -69,15 +69,22 @@ body {
                 font-size: 12px; margin: 10px 0 5px 0;
                 text-align: center;
             }
-            .pass-length-input { /* Input Range */
+
+            .form-range { /* Form Range */
                 cursor: pointer; margin-bottom: 5px; 
-            }            
-            .form-range::-moz-range-thumb {
-                width: 10px; height: 20px;
-                background-color: #E94F37; border: 1px solid #F6F7EB;                
+            
+                &:disabled::-moz-range-thumb {
+                    background-color: #ed8975; border-color: #ed8975; 
+                    cursor: not-allowed; pointer-events: all;
+                }
+                &::-moz-range-thumb {
+                    width: 10px; height: 20px;
+                    background-color: #E94F37; border: 1px solid #F6F7EB;   
+                }
+                &::-moz-range-track { height: 2px; }
+                &:focus::-moz-range-thumb { box-shadow: 0 0 0 .15rem #F6F7EB; }
             }
-            .form-range::-moz-range-track { height: 2px; }
-            .form-range:focus::-moz-range-thumb { box-shadow: 0 0 0 .15rem #F6F7EB; }
+           
             .progress { width: 100%; height: 5px; border: 1px solid #FFf; } /* Security progress bar */
             .sec-level-text {
                 font-size: 12px; text-align: center;
@@ -88,12 +95,12 @@ body {
 
         #generate-pass, #copy-password {
             margin: 1rem 0;
-            background-color: #E94F37; border-color: #bb2d3b;
+            background-color: #E94F37; 
             &:hover { background-color: #bb2d3b; }
             &:disabled { 
                 cursor: not-allowed; pointer-events: all;
-                background-color: #E94F37;
-                &:hover { background-color: #E94F37; }
+                background-color: #ed8975; border-color: #ed8975;
+                &:hover { background-color: #ed8975; }
             }
         }
 
