@@ -4,4 +4,4 @@
 
 🔗 https://mauriciobarrueta.github.io/PasswordGenerator/   
 
-![pass-generator](https://github.com/user-attachments/assets/b4d26ee2-91dc-4f19-9f3f-e77e5d01d61d)
+<img width="1366" height="634" alt="pass-generator" src="https://github.com/user-attachments/assets/fbc86672-6551-48ea-aba5-9d14ef621f91" />
